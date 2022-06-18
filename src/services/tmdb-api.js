@@ -1,4 +1,4 @@
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "27bcc9bf6404780004e2a5a1526915c2";
 const BASE_URL = `https://api.themoviedb.org/3`;
 const discoverEndpoint = '/discover/tv';
 const searchEndpoint = '/search/tv';
@@ -7,8 +7,8 @@ const detailsEndpoint = '/tv';
 const getShowsByProviderId = async (id) => {
   const request = await fetch(
     BASE_URL +
-      discoverEndpoint +
-      `?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_watch_providers=${id}&watch_region=CA`
+    discoverEndpoint +
+    `?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_watch_providers=${id}&watch_region=CA`
   );
   const response = await request.json();
   const shows = await response.results;
