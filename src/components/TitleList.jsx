@@ -1,6 +1,7 @@
 import Title from './Title';
 
 const TitleList = ({ name, titles, toggle, watchList }) => {
+
   return (
     <div className="titleList">
       <div className="title">
@@ -8,7 +9,7 @@ const TitleList = ({ name, titles, toggle, watchList }) => {
         <div className="titles-wrapper">
           {titles.map((title) => {
             const onWatchList =
-              watchList.findIndex((item) => item === title) === -1
+              watchList.findIndex((item) => item.id === title.id) === -1
                 ? false
                 : true;
             return (

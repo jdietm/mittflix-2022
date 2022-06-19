@@ -9,6 +9,7 @@ function MainPage({ toggle, watchList }) {
     getShowsByAllProviders(providers).then((result) => setShows(result));
   }, []);
 
+
   return (
     <>
       {shows ? (
