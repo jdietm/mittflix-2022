@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react';
-import TitleList from '../components/TitleList';
+import { getAllProviders } from '../services/tmdb-api';
+import ProviderListGrid from '../components/ProviderListGrid';
 
 const ProviderList = () => {
+  const [providers, setProviders] = useState([]);
+
+  useEffect(() => {
+    getAllProviders(providers).then((providers) => setProviders(providers));
+  }, []);
+
+  console.log("From ProviderListPage", providers);
 
   return (
     <>
-      <h1 className="show-details">Provider List Page</h1>
-      {/* {titles ? (
-        <TitleList titles={titles} watchList={watchList} toggle={toggle} />
-      ) : (
-        <h2>Loading...</h2>
-      )} */}
+      <ProviderListGrid providers={providers} />
     </>
   );
 };
