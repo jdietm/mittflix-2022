@@ -15,7 +15,7 @@ const Header = (props) => {
               <a href="/my-watch-list">Watch List</a>
             </li>
             <li>
-              <a href="/provider-list">Provider List</a>
+              <a href="/providers">Provider List</a>
             </li>
           </ul>
         </nav>

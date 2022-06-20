@@ -7,7 +7,7 @@ import SearchPage from './pages/Search';
 import SearchForm from './components/SearchForm';
 import DetailsPage from './pages/Details';
 import WatchListPage from './pages/WatchList';
-import ProviderListPage from './pages/ProviderList';
+import ProviderList from './pages/ProviderList';
 
 function App() {
   const [watchList, setWatchList] = useState(
@@ -52,9 +52,9 @@ function App() {
           }
         />
         <Route
-          path="/provider-list"
+          path="/providers"
           element={
-            <ProviderListPage />
+            <ProviderList />
           }
         />
       </Routes>

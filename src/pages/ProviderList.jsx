@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import TitleList from '../components/TitleList';
 
-const ProviderListPage = () => {
+const ProviderList = () => {
 
   return (
     <>
@@ -15,4 +15,4 @@ const ProviderListPage = () => {
   );
 };
 
-export default ProviderListPage;
+export default ProviderList;
