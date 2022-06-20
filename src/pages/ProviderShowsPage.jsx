@@ -7,18 +7,17 @@ import TitleList from '../components/TitleList';
 
 const ProviderShowsPage = ({ watchList, toggle }) => {
   const [shows, setShows] = useState([]);
-  const { provider_id } = useParams();
-  console.log("From ProviderShowPage", provider_id)
-    ;
+  const { provider_id, provider_name } = useParams();
+
   useEffect(() => {
     getShowsByProviderId(provider_id).then((shows) => setShows(shows));
   }, [provider_id]);
-
+  console.log(shows);
   return (
     <>
       <TitleList
         key={shows.id}
-        name={"Harcoded"}
+        name={provider_name}
         titles={shows}
         toggle={toggle}
         watchList={watchList}

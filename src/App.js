@@ -59,7 +59,7 @@ function App() {
           }
         />
         <Route
-          path="/providers/:provider_id"
+          path="/providers/:provider_id/:provider_name"
           element={
             <ProviderShowsPage watchList={watchList} toggle={handleToggle} />
           }
