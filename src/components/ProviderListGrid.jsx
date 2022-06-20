@@ -1,7 +1,6 @@
 import Provider from "./Provider";
 
 const ProviderListGrid = ({ providers }) => {
-  console.log(providers);
   return (
     <div className="titleList">
       <div className="title">

@@ -6,7 +6,7 @@ const detailsEndpoint = '/tv';
 
 const providersEndpoint = '/watch/providers/tv'
 
-const getShowsByProviderId = async (id) => {
+export const getShowsByProviderId = async (id) => {
   const request = await fetch(
     BASE_URL +
     discoverEndpoint +

@@ -9,7 +9,6 @@ const ProviderList = () => {
     getAllProviders(providers).then((providers) => setProviders(providers));
   }, []);
 
-  console.log("From ProviderListPage", providers);
 
   return (
     <>
